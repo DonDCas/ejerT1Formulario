@@ -1,0 +1,148 @@
+/* Archivo: styles.css
+    Estilos para el Configurador de Coches
+*/
+
+/* 1. RESET BÁSICO Y FUENTE */
+* {
+    /* Define el modelo de caja para facilitar el diseño */
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* Fuente por defecto */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Fondo suave */
+    background-color: #f4f7f9; 
+    /* Centrar el contenido vertical y horizontalmente */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alineación al inicio para scroll en pantallas pequeñas */
+    min-height: 100vh;
+    padding: 20px 0;
+}
+
+/* 2. CONTENEDOR PRINCIPAL DEL FORMULARIO */
+.container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    /* Sombra sutil para dar profundidad */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); 
+    width: 95%;
+    max-width: 650px;
+    margin: auto;
+}
+
+/* 3. TÍTULOS */
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 35px;
+    font-size: 2.2em;
+    font-weight: 600;
+    /* Línea de acento debajo del título principal */
+    border-bottom: 4px solid #007bff; 
+    padding-bottom: 10px;
+}
+
+h2 {
+    color: #007bff; /* Color primario azul */
+    font-size: 1.4em;
+    margin-bottom: 15px;
+    padding-left: 10px;
+    border-left: 5px solid #007bff;
+}
+
+/* 4. SECCIONES DE OPCIONES */
+.contenedorOpciones {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+    background-color: #fcfcfc;
+    transition: box-shadow 0.3s;
+}
+
+.contenedorOpciones:hover {
+    /* Efecto al pasar el ratón para indicar interactividad */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); 
+}
+
+/* 5. OPCIONES INDIVIDUALES (RADIO/CHECKBOX) */
+.opciones {
+    display: flex;
+    align-items: center;
+    padding: 12px 10px;
+    font-size: 1.05em;
+    color: #555;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.opciones:hover {
+    background-color: #e9ecef;
+}
+
+/* Estilo para los inputs */
+.opciones input[type="radio"],
+.opciones input[type="checkbox"] {
+    /* Aumentar el tamaño del radio/checkbox */
+    transform: scale(1.2); 
+    margin-right: 15px;
+    /* Color de acento para los inputs */
+    accent-color: #007bff; 
+}
+
+/* 6. SELECT Y BOTÓN (Sonido Claxon) */
+select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1em;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+button {
+    background-color: #28a745; /* Color verde para la acción (Play) */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 500;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* 7. RESUMEN DEL PRECIO */
+.summary {
+    padding: 25px 0 10px;
+    margin-top: 25px;
+    /* Separador visual para el resumen final */
+    border-top: 3px solid #007bff; 
+    text-align: center;
+}
+
+.final-price-label {
+    display: block;
+    font-size: 1.6em;
+    font-weight: bold;
+    color: #dc3545; /* Color rojo para destacar el precio final (puede ser verde o negro también) */
+    padding: 10px;
+    min-height: 1.5em; /* Asegura espacio antes de que el JS escriba el precio */
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurador de Coche JS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Configurador de Coches</h1>
+        
+        <form id="Config_Form">
+            <section class="contenedorOpciones">
+                <h2>Selección de modelo</h2>
+                <div class="opciones">
+                    <label for="modeloA">
+                        <input type="radio" id="modeloA" value="7000" name="modelo" checked> Modelo A - 7000€
+                    </label>
+                </div>
+                <div class="opciones">
+                    <label for="modeloB">
+                        <input type="radio" id="modeloB" value="9000" name="modelo"> Modelo B - 9000€
+                    </label>
+                </div>
+            </section>
+
+            <section class="contenedorOpciones">
+                <h2>Tipo de Combustible</h2>
+                <div class="opciones">
+                    <label for="gasoline">
+                        <input type="radio" id="gasoline" value="2000" name="combustible"> Gasolina + 2000€
+                    </label>
+                </div>
+                <div class="opciones">
+                    <label for="diesel">
+                        <input type="radio" id="diesel" value="5000" name="combustible"> Diesel + 5000€
+                    </label>
+                </div>
+            </section>
+
+            <section class="contenedorOpciones">
+                <h2>Extras</h2>
+                <div class="opciones">
+                    <label for="metalic">
+                        <input type="checkbox" id="metalic" value="1000" name="extra_metalic"> Pintura Metálica + 1000 €
+                    </label>
+                </div>
+                <div class="opciones">
+                    <label for="sound">
+                        <input type="checkbox" id="sound" value="500" name="extra_sound"> Pack de sonido + 500 €
+                    </label>
+                </div>
+                <div class="opciones">
+                    <label for="security">
+                        <input type="checkbox" id="security" value="1000" name="extra_security"> Pack de Seguridad + 1000 €
+                    </label>
+                </div>
+                <div class="opciones">
+                    <label for="tech">
+                        <input type="checkbox" id="tech" value="756" name="extra_tech"> Pack Tecnológico 756€
+                    </label>
+                </div>
+            </section>
+
+            <section class="contenedorOpciones">
+                <h2>Sonido Claxon</h2>
+                
+                <audio id="audioClaxon" src="" preload="auto"></audio> 
+
+                <select id="selectClaxon" onchange="cargarSonido()">
+                    <option value="clasico.mp3">Clásico</option>
+                    <option value="camion.mp3">Camión</option>
+                    <option value="furgoneta.mp3">Furgoneta</option>
+                    <option value="alarma.mp3">Alarma</option>
+                </select>
+
+                <button type="button" onclick="reproducirSonido()">Reproducir Sonido 🎶</button>
+            </section>
+
+            <section>
+                <div class="summary">
+                    <label class="final-price-label">
+                        </label>
+                </div>
+            </section>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
